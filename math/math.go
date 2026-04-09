@@ -19,6 +19,10 @@ import (
 	"github.com/goplus/js/primitive"
 )
 
+const (
+	XGoJSPackage = true
+)
+
 // ----------------------------------------------------------------------------
 
 func Round(primitive.Number) primitive.Number
