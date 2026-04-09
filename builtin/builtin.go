@@ -56,7 +56,7 @@ type Int64 primitive.Number
 type Float32 primitive.Number
 
 // float64 is the set of all IEEE-754 64-bit floating-point numbers.
-type Float64 primitive.Number
+type Float64 = primitive.Number
 
 /* TODO(xsw):
 // complex64 is the set of all complex numbers with float32 real and
