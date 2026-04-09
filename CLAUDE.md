@@ -36,6 +36,14 @@ Every Go built-in numeric/boolean/string type maps to a named type in `builtin`:
 | `byte`       | `Byte` (alias)  |
 | `rune`       | `Rune` (alias)  |
 
+## XGoJSPackage Packages
+
+Some packages (e.g. `math`) are built-in JavaScript packages, identified by the `XGoJSPackage = true` constant. For these packages:
+
+- **Do not implement functions in Go.** Only declare function prototypes (no function bodies).
+- The XGo compiler maps the declared functions to their JavaScript equivalents at compile time.
+- Constants should still be defined as Go constants.
+
 ## XGo Operator Overloading Convention
 
 XGo maps Go operators to methods using the `XGo_` prefix. Every `builtin` type must implement the applicable subset below.
