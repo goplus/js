@@ -73,10 +73,6 @@ type complex128 complex128
 // not nil. Values of string type are immutable.
 type String = primitive.String
 
-// int is a signed integer type that is at least 32 bits in size. It is a
-// distinct type, however, and not an alias for, say, int32.
-type Int primitive.Number
-
 // uint is an unsigned integer type that is at least 32 bits in size. It is a
 // distinct type, however, and not an alias for, say, uint32.
 type Uint primitive.Number
