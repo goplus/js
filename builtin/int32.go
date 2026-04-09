@@ -30,9 +30,89 @@ func Int32_Cast__0(v universe.Number) Int32 {
 	return Int32(v.XGo_Or(0))
 }
 
+// XGo_Add implements func (a int32) + (b int32) int32
+func (a Int32) XGo_Add(b Int32) Int32 {
+	return Int32((universe.Number(a) + universe.Number(b)).XGo_Or(0))
+}
+
+// XGo_Sub implements func (a int32) - (b int32) int32
+func (a Int32) XGo_Sub(b Int32) Int32 {
+	return Int32((universe.Number(a) - universe.Number(b)).XGo_Or(0))
+}
+
+// XGo_Mul implements func (a int32) * (b int32) int32
+func (a Int32) XGo_Mul(b Int32) Int32 {
+	return Int32((universe.Number(a) * universe.Number(b)).XGo_Or(0))
+}
+
+// XGo_Quo implements func (a int32) / (b int32) int32
+func (a Int32) XGo_Quo(b Int32) Int32 {
+	return Int32((universe.Number(a) / universe.Number(b)).XGo_Or(0))
+}
+
+// XGo_Rem implements func (a int32) % (b int32) int32
+func (a Int32) XGo_Rem(b Int32) Int32 {
+	return Int32(universe.Number(a).XGo_Rem(universe.Number(b)))
+}
+
 // XGo_Or implements func (a int32) | (b int32) int32
 func (a Int32) XGo_Or(b Int32) Int32 {
 	return Int32(universe.Number(a).XGo_Or(universe.Number(b)))
+}
+
+// XGo_And implements func (a int32) & (b int32) int32
+func (a Int32) XGo_And(b Int32) Int32 {
+	return Int32(universe.Number(a).XGo_And(universe.Number(b)))
+}
+
+// XGo_Xor implements func (a int32) ^ (b int32) int32
+func (a Int32) XGo_Xor(b Int32) Int32 {
+	return Int32(universe.Number(a).XGo_Xor(universe.Number(b)))
+}
+
+// XGo_AndNot implements func (a int32) &^ (b int32) int32
+func (a Int32) XGo_AndNot(b Int32) Int32 {
+	return Int32(universe.Number(a).XGo_AndNot(universe.Number(b)))
+}
+
+// XGo_Lsh implements func (a int32) << (b uint) int32
+func (a Int32) XGo_Lsh(b Uint) Int32 {
+	return Int32(universe.Number(a).XGo_Lsh(universe.Number(b)))
+}
+
+// XGo_Rsh implements func (a int32) >> (b uint) int32
+func (a Int32) XGo_Rsh(b Uint) Int32 {
+	return Int32(universe.Number(a).XGo_Rsh(universe.Number(b)))
+}
+
+// XGo_Neg implements func -(a int32) int32
+func (a Int32) XGo_Neg() Int32 {
+	return Int32(universe.Number(a).XGo_Neg().XGo_Or(0))
+}
+
+// XGo_Not implements func ^(a int32) int32
+func (a Int32) XGo_Not() Int32 {
+	return Int32(universe.Number(a).XGo_Not())
+}
+
+// XGo_LT implements func (a int32) < (b int32) bool
+func (a Int32) XGo_LT(b Int32) bool {
+	return universe.Number(a) < universe.Number(b)
+}
+
+// XGo_LE implements func (a int32) <= (b int32) bool
+func (a Int32) XGo_LE(b Int32) bool {
+	return universe.Number(a) <= universe.Number(b)
+}
+
+// XGo_GT implements func (a int32) > (b int32) bool
+func (a Int32) XGo_GT(b Int32) bool {
+	return universe.Number(a) > universe.Number(b)
+}
+
+// XGo_GE implements func (a int32) >= (b int32) bool
+func (a Int32) XGo_GE(b Int32) bool {
+	return universe.Number(a) >= universe.Number(b)
 }
 
 // ----------------------------------------------------------------------------

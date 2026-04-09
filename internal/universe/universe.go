@@ -27,5 +27,13 @@ type (
 type Number float64
 
 func (a Number) XGo_Or(b Number) Number
+func (a Number) XGo_And(b Number) Number
+func (a Number) XGo_Xor(b Number) Number
+func (a Number) XGo_AndNot(b Number) Number
+func (a Number) XGo_Lsh(b Number) Number
+func (a Number) XGo_Rsh(b Number) Number
+func (a Number) XGo_Rem(b Number) Number
+func (a Number) XGo_Neg() Number
+func (a Number) XGo_Not() Number
 
 // ----------------------------------------------------------------------------
