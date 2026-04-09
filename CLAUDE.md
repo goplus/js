@@ -6,12 +6,9 @@ It implements Go's built-in types targeting JavaScript as the compilation backen
 
 ```
 .
-├── internal/
-│   └── universe/   # JS primitive wrappers: Number, String, Boolean, …
-└── builtin/        # Go built-in types exposed to XGo ← primary work area
+├── primitive/  # JS primitive wrappers: Number, String, Boolean, …
+└── builtin/    # Go built-in types exposed to XGo ← primary work area
 ```
-
-`internal/universe` holds thin wrappers over JavaScript's own primitive types and is **not** part of the public API. All user-facing types live in `builtin`.
 
 ## Type Mapping
 
