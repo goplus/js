@@ -16,6 +16,7 @@ limitations under the License.
 package builtin
 
 import (
+	"github.com/goplus/js/math"
 	"github.com/goplus/js/primitive"
 )
 
@@ -42,7 +43,7 @@ func (a Int32) XGo_Sub(b Int32) Int32 {
 
 // JS_Mul implements func (a int32) * (b int32) int32
 func (a Int32) XGo_Mul(b Int32) Int32 {
-	return Int32((primitive.Number(a) * primitive.Number(b)).JS_Or(0))
+	return Int32(math.Imul(primitive.Number(a), primitive.Number(b)))
 }
 
 // JS_Quo implements func (a int32) / (b int32) int32
