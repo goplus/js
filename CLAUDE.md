@@ -7,6 +7,7 @@ It implements Go's built-in types targeting JavaScript as the compilation backen
 ```
 .
 ├── primitive/  # JS primitive wrappers: Number, String, Boolean, …
+│   └── math/   # JS mathematical constants and functions
 └── builtin/    # Go built-in types exposed to XGo ← primary work area
 ```
 
@@ -38,7 +39,7 @@ Every Go built-in numeric/boolean/string type maps to a named type in `builtin`:
 
 ## XGoJSPackage Packages
 
-Some packages (e.g. `math`) are built-in JavaScript packages, identified by the `XGoJSPackage = true` constant. For these packages:
+Some packages (e.g. `primitive/math`) are built-in JavaScript packages, identified by the `XGoJSPackage` constant. For these packages:
 
 - **Do not implement functions in Go.** Only declare function prototypes (no function bodies).
 - The XGo compiler maps the declared functions to their JavaScript equivalents at compile time.

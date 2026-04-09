@@ -16,8 +16,8 @@ limitations under the License.
 package builtin
 
 import (
-	"github.com/goplus/js/math"
 	"github.com/goplus/js/primitive"
+	"github.com/goplus/js/primitive/math"
 )
 
 // ----------------------------------------------------------------------------
