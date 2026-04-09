@@ -31,67 +31,67 @@ func Int32_Cast__0(v primitive.Number) Int32 {
 	return Int32(v.JS_Or(0))
 }
 
-// JS_Add implements func (a int32) + (b int32) int32
+// XGo_Add implements func (a int32) + (b int32) int32
 func (a Int32) XGo_Add(b Int32) Int32 {
 	return Int32((primitive.Number(a) + primitive.Number(b)).JS_Or(0))
 }
 
-// JS_Sub implements func (a int32) - (b int32) int32
+// XGo_Sub implements func (a int32) - (b int32) int32
 func (a Int32) XGo_Sub(b Int32) Int32 {
 	return Int32((primitive.Number(a) - primitive.Number(b)).JS_Or(0))
 }
 
-// JS_Mul implements func (a int32) * (b int32) int32
+// XGo_Mul implements func (a int32) * (b int32) int32
 func (a Int32) XGo_Mul(b Int32) Int32 {
 	return Int32(math.Imul(primitive.Number(a), primitive.Number(b)))
 }
 
-// JS_Quo implements func (a int32) / (b int32) int32
+// XGo_Quo implements func (a int32) / (b int32) int32
 func (a Int32) XGo_Quo(b Int32) Int32 {
 	return Int32((primitive.Number(a) / primitive.Number(b)).JS_Or(0))
 }
 
-// JS_Rem implements func (a int32) % (b int32) int32
+// XGo_Rem implements func (a int32) % (b int32) int32
 func (a Int32) XGo_Rem(b Int32) Int32 {
 	return Int32(primitive.Number(a).JS_Rem(primitive.Number(b)))
 }
 
-// JS_Or implements func (a int32) | (b int32) int32
+// XGo_Or implements func (a int32) | (b int32) int32
 func (a Int32) XGo_Or(b Int32) Int32 {
 	return Int32(primitive.Number(a).JS_Or(primitive.Number(b)))
 }
 
-// JS_And implements func (a int32) & (b int32) int32
+// XGo_And implements func (a int32) & (b int32) int32
 func (a Int32) XGo_And(b Int32) Int32 {
 	return Int32(primitive.Number(a).JS_And(primitive.Number(b)))
 }
 
-// JS_Xor implements func (a int32) ^ (b int32) int32
+// XGo_Xor implements func (a int32) ^ (b int32) int32
 func (a Int32) XGo_Xor(b Int32) Int32 {
 	return Int32(primitive.Number(a).JS_Xor(primitive.Number(b)))
 }
 
-// JS_AndNot implements func (a int32) &^ (b int32) int32
+// XGo_AndNot implements func (a int32) &^ (b int32) int32
 func (a Int32) XGo_AndNot(b Int32) Int32 {
 	return Int32(primitive.Number(a).JS_And(primitive.Number(b).JS_Not()))
 }
 
-// JS_Lsh implements func (a int32) << (b uint) int32
+// XGo_Lsh implements func (a int32) << (b uint) int32
 func (a Int32) XGo_Lsh(b Uint) Int32 {
 	return Int32(primitive.Number(a).JS_Lsh(primitive.Number(b)))
 }
 
-// JS_Rsh implements func (a int32) >> (b uint) int32
+// XGo_Rsh implements func (a int32) >> (b uint) int32
 func (a Int32) XGo_Rsh(b Uint) Int32 {
 	return Int32(primitive.Number(a).JS_Rsh(primitive.Number(b)))
 }
 
-// JS_Neg implements func -(a int32) int32
+// XGo_Neg implements func -(a int32) int32
 func (a Int32) XGo_Neg() Int32 {
 	return Int32((-primitive.Number(a)).JS_Or(0))
 }
 
-// JS_Not implements func ^(a int32) int32
+// XGo_Not implements func ^(a int32) int32
 func (a Int32) XGo_Not() Int32 {
 	return Int32(primitive.Number(a).JS_Not())
 }

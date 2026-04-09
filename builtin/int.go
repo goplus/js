@@ -33,67 +33,67 @@ func Int_Cast__0(v primitive.Number) Int {
 	return Int(v.JS_Or(0))
 }
 
-// JS_Add implements func (a int) + (b int) int
+// XGo_Add implements func (a int) + (b int) int
 func (a Int) XGo_Add(b Int) Int {
 	return Int((primitive.Number(a) + primitive.Number(b)).JS_Or(0))
 }
 
-// JS_Sub implements func (a int) - (b int) int
+// XGo_Sub implements func (a int) - (b int) int
 func (a Int) XGo_Sub(b Int) Int {
 	return Int((primitive.Number(a) - primitive.Number(b)).JS_Or(0))
 }
 
-// JS_Mul implements func (a int) * (b int) int
+// XGo_Mul implements func (a int) * (b int) int
 func (a Int) XGo_Mul(b Int) Int {
 	return Int(math.Imul(primitive.Number(a), primitive.Number(b)))
 }
 
-// JS_Quo implements func (a int) / (b int) int
+// XGo_Quo implements func (a int) / (b int) int
 func (a Int) XGo_Quo(b Int) Int {
 	return Int((primitive.Number(a) / primitive.Number(b)).JS_Or(0))
 }
 
-// JS_Rem implements func (a int) % (b int) int
+// XGo_Rem implements func (a int) % (b int) int
 func (a Int) XGo_Rem(b Int) Int {
 	return Int(primitive.Number(a).JS_Rem(primitive.Number(b)))
 }
 
-// JS_Or implements func (a int) | (b int) int
+// XGo_Or implements func (a int) | (b int) int
 func (a Int) XGo_Or(b Int) Int {
 	return Int(primitive.Number(a).JS_Or(primitive.Number(b)))
 }
 
-// JS_And implements func (a int) & (b int) int
+// XGo_And implements func (a int) & (b int) int
 func (a Int) XGo_And(b Int) Int {
 	return Int(primitive.Number(a).JS_And(primitive.Number(b)))
 }
 
-// JS_Xor implements func (a int) ^ (b int) int
+// XGo_Xor implements func (a int) ^ (b int) int
 func (a Int) XGo_Xor(b Int) Int {
 	return Int(primitive.Number(a).JS_Xor(primitive.Number(b)))
 }
 
-// JS_AndNot implements func (a int) &^ (b int) int
+// XGo_AndNot implements func (a int) &^ (b int) int
 func (a Int) XGo_AndNot(b Int) Int {
 	return Int(primitive.Number(a).JS_And(primitive.Number(b).JS_Not()))
 }
 
-// JS_Lsh implements func (a int) << (b uint) int
+// XGo_Lsh implements func (a int) << (b uint) int
 func (a Int) XGo_Lsh(b Uint) Int {
 	return Int(primitive.Number(a).JS_Lsh(primitive.Number(b)))
 }
 
-// JS_Rsh implements func (a int) >> (b uint) int
+// XGo_Rsh implements func (a int) >> (b uint) int
 func (a Int) XGo_Rsh(b Uint) Int {
 	return Int(primitive.Number(a).JS_Rsh(primitive.Number(b)))
 }
 
-// JS_Neg implements func -(a int) int
+// XGo_Neg implements func -(a int) int
 func (a Int) XGo_Neg() Int {
 	return Int((-primitive.Number(a)).JS_Or(0))
 }
 
-// JS_Not implements func ^(a int) int
+// XGo_Not implements func ^(a int) int
 func (a Int) XGo_Not() Int {
 	return Int(primitive.Number(a).JS_Not())
 }
