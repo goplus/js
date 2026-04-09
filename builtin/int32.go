@@ -72,7 +72,7 @@ func (a Int32) XGo_Xor(b Int32) Int32 {
 
 // XGo_AndNot implements func (a int32) &^ (b int32) int32
 func (a Int32) XGo_AndNot(b Int32) Int32 {
-	return Int32(primitive.Number(a).XGo_AndNot(primitive.Number(b)))
+	return Int32(primitive.Number(a).XGo_And(primitive.Number(b).XGo_Not()))
 }
 
 // XGo_Lsh implements func (a int32) << (b uint) int32
@@ -87,7 +87,7 @@ func (a Int32) XGo_Rsh(b Uint) Int32 {
 
 // XGo_Neg implements func -(a int32) int32
 func (a Int32) XGo_Neg() Int32 {
-	return Int32(primitive.Number(a).XGo_Neg().XGo_Or(0))
+	return Int32((-primitive.Number(a)).XGo_Or(0))
 }
 
 // XGo_Not implements func ^(a int32) int32
