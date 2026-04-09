@@ -7,8 +7,9 @@ It implements Go's built-in types targeting JavaScript as the compilation backen
 ```
 .
 ├── primitive/  # JS primitive wrappers: Number, String, Boolean, …
-│   └── math/   # JS mathematical constants and functions
-└── builtin/    # Go built-in types exposed to XGo ← primary work area
+│   └── math/   # JS primitive wrappers: Mathematical functions and constants
+├── builtin/    # Go built-in types exposed to XGo ← primary work area
+└── math/       # Go math standard library implemented by JS primitive
 ```
 
 ## Type Mapping
