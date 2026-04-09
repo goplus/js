@@ -48,10 +48,6 @@ type Int8 universe.Number
 // Range: -32768 through 32767.
 type Int16 universe.Number
 
-// int32 is the set of all signed 32-bit integers.
-// Range: -2147483648 through 2147483647.
-type Int32 universe.Number
-
 // int64 is the set of all signed 64-bit integers.
 // Range: -9223372036854775808 through 9223372036854775807.
 type Int64 universe.Number

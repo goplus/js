@@ -13,19 +13,26 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package universe
+package builtin
 
-// ----------------------------------------------------------------------------
-
-type (
-	String  = string
-	Boolean = bool
+import (
+	"github.com/goplus/js/internal/universe"
 )
 
 // ----------------------------------------------------------------------------
 
-type Number float64
+// int32 is the set of all signed 32-bit integers.
+// Range: -2147483648 through 2147483647.
+type Int32 universe.Number
 
-func (a Number) XGo_Or(b Number) Number
+// Int32_Cast: func int32(v int) int32
+func Int32_Cast__0(v universe.Number) Int32 {
+	return Int32(v.XGo_Or(0))
+}
+
+// XGo_Or implements func (a int32) | (b int32) int32
+func (a Int32) XGo_Or(b Int32) Int32 {
+	return Int32(universe.Number(a).XGo_Or(universe.Number(b)))
+}
 
 // ----------------------------------------------------------------------------
