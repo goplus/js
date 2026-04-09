@@ -32,10 +32,6 @@ type Uint8 primitive.Number
 // Range: 0 through 65535.
 type Uint16 primitive.Number
 
-// uint32 is the set of all unsigned 32-bit integers.
-// Range: 0 through 4294967295.
-type Uint32 primitive.Number
-
 // uint64 is the set of all unsigned 64-bit integers.
 // Range: 0 through 18446744073709551615.
 type Uint64 primitive.Number
@@ -72,10 +68,6 @@ type complex128 complex128
 // necessarily representing UTF-8-encoded text. A string may be empty, but
 // not nil. Values of string type are immutable.
 type String = primitive.String
-
-// uint is an unsigned integer type that is at least 32 bits in size. It is a
-// distinct type, however, and not an alias for, say, uint32.
-type Uint primitive.Number
 
 // uintptr is an integer type that is large enough to hold the bit pattern of
 // any pointer.

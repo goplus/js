@@ -98,24 +98,80 @@ func (a Int) XGo_Not() Int {
 	return Int(primitive.Number(a).JS_Not())
 }
 
-// JS_LT implements func (a int) < (b int) bool
-func (a Int) XGo_LT(b Int) bool {
-	return primitive.Number(a) < primitive.Number(b)
+// ----------------------------------------------------------------------------
+
+// uint is an unsigned integer type that is at least 32 bits in size. It is a
+// distinct type, however, and not an alias for, say, uint.
+type Uint primitive.Number
+
+// Uint_Cast: func uint(v float64) uint
+func Uint_Cast__0(v primitive.Number) Uint {
+	return Uint(v.JS_RshU(0))
 }
 
-// JS_LE implements func (a int) <= (b int) bool
-func (a Int) XGo_LE(b Int) bool {
-	return primitive.Number(a) <= primitive.Number(b)
+// XGo_Add implements func (a uint) + (b uint) uint
+func (a Uint) XGo_Add(b Uint) Uint {
+	return Uint((primitive.Number(a) + primitive.Number(b)).JS_RshU(0))
 }
 
-// JS_GT implements func (a int) > (b int) bool
-func (a Int) XGo_GT(b Int) bool {
-	return primitive.Number(a) > primitive.Number(b)
+// XGo_Sub implements func (a uint) - (b uint) uint
+func (a Uint) XGo_Sub(b Uint) Uint {
+	return Uint((primitive.Number(a) - primitive.Number(b)).JS_RshU(0))
 }
 
-// JS_GE implements func (a int) >= (b int) bool
-func (a Int) XGo_GE(b Int) bool {
-	return primitive.Number(a) >= primitive.Number(b)
+// XGo_Mul implements func (a uint) * (b uint) uint
+func (a Uint) XGo_Mul(b Uint) Uint {
+	return Uint(math.Imul(primitive.Number(a), primitive.Number(b)).JS_RshU(0))
+}
+
+// XGo_Quo implements func (a uint) / (b uint) uint
+func (a Uint) XGo_Quo(b Uint) Uint {
+	return Uint((primitive.Number(a) / primitive.Number(b)).JS_RshU(0))
+}
+
+// XGo_Rem implements func (a uint) % (b uint) uint
+func (a Uint) XGo_Rem(b Uint) Uint {
+	return Uint(primitive.Number(a).JS_Rem(primitive.Number(b)).JS_RshU(0))
+}
+
+// XGo_Or implements func (a uint) | (b uint) uint
+func (a Uint) XGo_Or(b Uint) Uint {
+	return Uint(primitive.Number(a).JS_Or(primitive.Number(b)).JS_RshU(0))
+}
+
+// XGo_And implements func (a uint) & (b uint) uint
+func (a Uint) XGo_And(b Uint) Uint {
+	return Uint(primitive.Number(a).JS_And(primitive.Number(b)).JS_RshU(0))
+}
+
+// XGo_Xor implements func (a uint) ^ (b uint) uint
+func (a Uint) XGo_Xor(b Uint) Uint {
+	return Uint(primitive.Number(a).JS_Xor(primitive.Number(b)).JS_RshU(0))
+}
+
+// XGo_AndNot implements func (a uint) &^ (b uint) uint
+func (a Uint) XGo_AndNot(b Uint) Uint {
+	return Uint(primitive.Number(a).JS_And(primitive.Number(b).JS_Not()).JS_RshU(0))
+}
+
+// XGo_Lsh implements func (a uint) << (b uint) uint
+func (a Uint) XGo_Lsh(b Uint) Uint {
+	return Uint(primitive.Number(a).JS_Lsh(primitive.Number(b)).JS_RshU(0))
+}
+
+// XGo_Rsh implements func (a uint) >> (b uint) uint
+func (a Uint) XGo_Rsh(b Uint) Uint {
+	return Uint(primitive.Number(a).JS_RshU(primitive.Number(b)))
+}
+
+// XGo_Neg implements func -(a uint) uint
+func (a Uint) XGo_Neg() Uint {
+	return Uint((-primitive.Number(a)).JS_RshU(0))
+}
+
+// XGo_Not implements func ^(a uint) uint
+func (a Uint) XGo_Not() Uint {
+	return Uint(primitive.Number(a).JS_Not().JS_RshU(0))
 }
 
 // ----------------------------------------------------------------------------
