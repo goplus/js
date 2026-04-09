@@ -27,90 +27,90 @@ type Int32 primitive.Number
 
 // Int32_Cast: func int32(v int) int32
 func Int32_Cast__0(v primitive.Number) Int32 {
-	return Int32(v.XGo_Or(0))
+	return Int32(v.JS_Or(0))
 }
 
-// XGo_Add implements func (a int32) + (b int32) int32
+// JS_Add implements func (a int32) + (b int32) int32
 func (a Int32) XGo_Add(b Int32) Int32 {
-	return Int32((primitive.Number(a) + primitive.Number(b)).XGo_Or(0))
+	return Int32((primitive.Number(a) + primitive.Number(b)).JS_Or(0))
 }
 
-// XGo_Sub implements func (a int32) - (b int32) int32
+// JS_Sub implements func (a int32) - (b int32) int32
 func (a Int32) XGo_Sub(b Int32) Int32 {
-	return Int32((primitive.Number(a) - primitive.Number(b)).XGo_Or(0))
+	return Int32((primitive.Number(a) - primitive.Number(b)).JS_Or(0))
 }
 
-// XGo_Mul implements func (a int32) * (b int32) int32
+// JS_Mul implements func (a int32) * (b int32) int32
 func (a Int32) XGo_Mul(b Int32) Int32 {
-	return Int32((primitive.Number(a) * primitive.Number(b)).XGo_Or(0))
+	return Int32((primitive.Number(a) * primitive.Number(b)).JS_Or(0))
 }
 
-// XGo_Quo implements func (a int32) / (b int32) int32
+// JS_Quo implements func (a int32) / (b int32) int32
 func (a Int32) XGo_Quo(b Int32) Int32 {
-	return Int32((primitive.Number(a) / primitive.Number(b)).XGo_Or(0))
+	return Int32((primitive.Number(a) / primitive.Number(b)).JS_Or(0))
 }
 
-// XGo_Rem implements func (a int32) % (b int32) int32
+// JS_Rem implements func (a int32) % (b int32) int32
 func (a Int32) XGo_Rem(b Int32) Int32 {
-	return Int32(primitive.Number(a).XGo_Rem(primitive.Number(b)))
+	return Int32(primitive.Number(a).JS_Rem(primitive.Number(b)))
 }
 
-// XGo_Or implements func (a int32) | (b int32) int32
+// JS_Or implements func (a int32) | (b int32) int32
 func (a Int32) XGo_Or(b Int32) Int32 {
-	return Int32(primitive.Number(a).XGo_Or(primitive.Number(b)))
+	return Int32(primitive.Number(a).JS_Or(primitive.Number(b)))
 }
 
-// XGo_And implements func (a int32) & (b int32) int32
+// JS_And implements func (a int32) & (b int32) int32
 func (a Int32) XGo_And(b Int32) Int32 {
-	return Int32(primitive.Number(a).XGo_And(primitive.Number(b)))
+	return Int32(primitive.Number(a).JS_And(primitive.Number(b)))
 }
 
-// XGo_Xor implements func (a int32) ^ (b int32) int32
+// JS_Xor implements func (a int32) ^ (b int32) int32
 func (a Int32) XGo_Xor(b Int32) Int32 {
-	return Int32(primitive.Number(a).XGo_Xor(primitive.Number(b)))
+	return Int32(primitive.Number(a).JS_Xor(primitive.Number(b)))
 }
 
-// XGo_AndNot implements func (a int32) &^ (b int32) int32
+// JS_AndNot implements func (a int32) &^ (b int32) int32
 func (a Int32) XGo_AndNot(b Int32) Int32 {
-	return Int32(primitive.Number(a).XGo_And(primitive.Number(b).XGo_Not()))
+	return Int32(primitive.Number(a).JS_And(primitive.Number(b).JS_Not()))
 }
 
-// XGo_Lsh implements func (a int32) << (b uint) int32
+// JS_Lsh implements func (a int32) << (b uint) int32
 func (a Int32) XGo_Lsh(b Uint) Int32 {
-	return Int32(primitive.Number(a).XGo_Lsh(primitive.Number(b)))
+	return Int32(primitive.Number(a).JS_Lsh(primitive.Number(b)))
 }
 
-// XGo_Rsh implements func (a int32) >> (b uint) int32
+// JS_Rsh implements func (a int32) >> (b uint) int32
 func (a Int32) XGo_Rsh(b Uint) Int32 {
-	return Int32(primitive.Number(a).XGo_Rsh(primitive.Number(b)))
+	return Int32(primitive.Number(a).JS_Rsh(primitive.Number(b)))
 }
 
-// XGo_Neg implements func -(a int32) int32
+// JS_Neg implements func -(a int32) int32
 func (a Int32) XGo_Neg() Int32 {
-	return Int32((-primitive.Number(a)).XGo_Or(0))
+	return Int32((-primitive.Number(a)).JS_Or(0))
 }
 
-// XGo_Not implements func ^(a int32) int32
+// JS_Not implements func ^(a int32) int32
 func (a Int32) XGo_Not() Int32 {
-	return Int32(primitive.Number(a).XGo_Not())
+	return Int32(primitive.Number(a).JS_Not())
 }
 
-// XGo_LT implements func (a int32) < (b int32) bool
+// JS_LT implements func (a int32) < (b int32) bool
 func (a Int32) XGo_LT(b Int32) bool {
 	return primitive.Number(a) < primitive.Number(b)
 }
 
-// XGo_LE implements func (a int32) <= (b int32) bool
+// JS_LE implements func (a int32) <= (b int32) bool
 func (a Int32) XGo_LE(b Int32) bool {
 	return primitive.Number(a) <= primitive.Number(b)
 }
 
-// XGo_GT implements func (a int32) > (b int32) bool
+// JS_GT implements func (a int32) > (b int32) bool
 func (a Int32) XGo_GT(b Int32) bool {
 	return primitive.Number(a) > primitive.Number(b)
 }
 
-// XGo_GE implements func (a int32) >= (b int32) bool
+// JS_GE implements func (a int32) >= (b int32) bool
 func (a Int32) XGo_GE(b Int32) bool {
 	return primitive.Number(a) >= primitive.Number(b)
 }
