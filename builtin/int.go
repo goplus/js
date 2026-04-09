@@ -28,7 +28,7 @@ import (
 // The size of int is 32 bits for JS.
 type Int primitive.Number
 
-// Int_Cast: func int(v int) int
+// Int_Cast: func int(v float64) int
 func Int_Cast__0(v primitive.Number) Int {
 	return Int(v.JS_Or(0))
 }

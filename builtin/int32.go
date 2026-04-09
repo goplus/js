@@ -26,7 +26,7 @@ import (
 // Range: -2147483648 through 2147483647.
 type Int32 primitive.Number
 
-// Int32_Cast: func int32(v int) int32
+// Int32_Cast: func int32(v float64) int32
 func Int32_Cast__0(v primitive.Number) Int32 {
 	return Int32(v.JS_Or(0))
 }
